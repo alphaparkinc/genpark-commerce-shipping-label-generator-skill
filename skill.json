@@ -1,0 +1,51 @@
+{
+  "name": "commerce-shipping-label-generator-skill",
+  "description": "Volumetric shipping label and postage generator skill. Validates shipping address formats, estimates volumetric weights, builds carrier request payloads and returns printable shipping labels drafts.",
+  "version": "1.0.0",
+  "author": "alphaparkinc",
+  "inputs": {
+    "sender_address": {
+      "type": "object",
+      "properties": {
+        "street": { "type": "string" },
+        "city": { "type": "string" },
+        "postal_code": { "type": "string" },
+        "country": { "type": "string" }
+      },
+      "required": ["street", "city", "postal_code", "country"]
+    },
+    "recipient_address": {
+      "type": "object",
+      "properties": {
+        "street": { "type": "string" },
+        "city": { "type": "string" },
+        "postal_code": { "type": "string" },
+        "country": { "type": "string" }
+      },
+      "required": ["street", "city", "postal_code", "country"]
+    },
+    "parcel": {
+      "type": "object",
+      "properties": {
+        "length_in": { "type": "number" },
+        "width_in": { "type": "number" },
+        "height_in": { "type": "number" },
+        "weight_oz": { "type": "number" }
+      },
+      "required": ["length_in", "width_in", "height_in", "weight_oz"]
+    }
+  },
+  "outputs": {
+    "volumetric_weight_lbs": {
+      "type": "number"
+    },
+    "postage_rate_est": {
+      "type": "number"
+    },
+    "carrier_payload": {
+      "type": "object",
+      "description": "Standard EasyPost or FedEx API shipment creation parameters."
+    }
+  },
+  "prompt": "You are a shipping label generator agent. Validate incoming postal addresses, compute the dimensional (volumetric) weight factor, and output a valid carrier dispatch payload."
+}
