@@ -1,5 +1,5 @@
 {
-  "name": "commerce-shipping-label-generator-skill",
+  "name": "genpark-commerce-shipping-label-generator-skill",
   "description": "GenPark AI Agent Skill - Volumetric shipping label and postage generator skill. Validates shipping address formats, estimates volumetric weights, builds carrier request payloads and returns printable shipping labels drafts.",
   "version": "1.0.0",
   "author": "genpark",
