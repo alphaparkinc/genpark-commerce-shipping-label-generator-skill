@@ -1,4 +1,4 @@
-# commerce-shipping-label-generator-skill
+# genpark-commerce-shipping-label-generator-skill
 
 > **GenPark AI Agent Skill** -- # Commerce Shipping Label & Postage Generator Skill
 
