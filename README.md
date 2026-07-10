@@ -1,4 +1,6 @@
-# Commerce Shipping Label & Postage Generator Skill
+# commerce-shipping-label-generator-skill
+
+> **GenPark AI Agent Skill** -- # Commerce Shipping Label & Postage Generator Skill
 
 This repository contains the **Commerce Shipping Label & Postage Generator Skill** — an agent customization skill config (`skill.json`), a production-ready Python SDK client (`shipping_generator.py`), and executable verification tests. It is designed to validate delivery addresses, compute volumetric package weights, estimate shipping rates, and compile carrier payloads.
 
